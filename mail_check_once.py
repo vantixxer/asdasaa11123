@@ -9,11 +9,11 @@ import urllib.parse
 import urllib.request
 from email.header import decode_header, make_header
 
-BOT_TOKEN = os.environ["BOT_TOKEN"]
-CHAT_ID = os.environ["CHAT_ID"]
-EMAIL_ADDRESS = os.environ["EMAIL_ADDRESS"]
-EMAIL_APP_PASSWORD = os.environ["EMAIL_APP_PASSWORD"]
-IMAP_HOST = os.environ.get("IMAP_HOST") or "imap.gmail.com"
+BOT_TOKEN = os.environ["BOT_TOKEN"].strip()
+CHAT_ID = os.environ["CHAT_ID"].strip()
+EMAIL_ADDRESS = os.environ["EMAIL_ADDRESS"].strip()
+EMAIL_APP_PASSWORD = os.environ["EMAIL_APP_PASSWORD"].strip()
+IMAP_HOST = (os.environ.get("IMAP_HOST") or "imap.gmail.com").strip()
 MAX_PER_RUN = 10  # защита от лавины писем при первом запуске
 
 
